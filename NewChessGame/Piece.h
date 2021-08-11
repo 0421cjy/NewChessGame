@@ -1,27 +1,33 @@
 #pragma once
 
+#include<utility>
+
 namespace jy
 {
     class Pawn : public IPiece
     {
     private:
-        int posX;
-        int posY;
+        int m_color;
+        int m_posX;
+        int m_posY;
 
     public:
-        Pawn();
+        Pawn(int color, int posX, int posY);
         virtual ~Pawn();
 
     public:
         void Move() override;
         void Promotion();
+        int GetColor() const;
+        std::pair<int, int> GetPosition() const;
     };
 
     class Bishop : public IPiece
     {
     private:
-        int posX;
-        int posY;
+        int m_color;
+        int m_posX;
+        int m_posY;
 
     public:
         Bishop();
@@ -34,8 +40,9 @@ namespace jy
     class Knight : public IPiece
     {
     private:
-        int posX;
-        int posY;
+        int m_color;
+        int m_posX;
+        int m_posY;
 
     public:
         Knight();
@@ -48,8 +55,9 @@ namespace jy
     class Rook : public IPiece
     {
     private:
-        int posX;
-        int posY;
+        int m_color;
+        int m_posX;
+        int m_posY;
 
     public:
         Rook();
@@ -63,8 +71,9 @@ namespace jy
     class Queen : public IPiece
     {
     private:
-        int posX;
-        int posY;
+        int m_color;
+        int m_posX;
+        int m_posY;
 
     public:
         Queen();
@@ -77,8 +86,9 @@ namespace jy
     class King : public IPiece
     {
     private:
-        int posX;
-        int posY;
+        int m_color;
+        int m_posX;
+        int m_posY;
 
     public:
         King();

@@ -5,7 +5,8 @@ using namespace jy;
 
 namespace jy
 {
-    Pawn::Pawn()
+    Pawn::Pawn(int color, int posX, int posY)
+        :m_color(color), m_posX(posX), m_posY(posY)
     {
     }
 
@@ -19,6 +20,16 @@ namespace jy
 
     void Pawn::Promotion()
     {
+    }
+
+    int Pawn::GetColor() const
+    {
+        return m_color;
+    }
+
+    std::pair<int, int> Pawn::GetPosition() const
+    {
+        return std::make_pair(m_posX, m_posY);
     }
 
     Bishop::Bishop()
