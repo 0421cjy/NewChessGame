@@ -14,11 +14,15 @@ namespace jy
     {
     }
 
-    void Pawn::Move()
+    bool Pawn::Move(int posX, int posY)
     {
+
+
+
+        return true;
     }
 
-    void Pawn::Promotion()
+    void Pawn::Promote()
     {
     }
 
@@ -27,9 +31,14 @@ namespace jy
         return m_color;
     }
 
-    std::pair<int, int> Pawn::GetPosition() const
+    int Pawn::GetPositionX() const
     {
-        return std::make_pair(m_posX, m_posY);
+        return m_posX;
+    }
+
+    int Pawn::GetPositionY() const
+    {
+        return m_posY;
     }
 
     Bishop::Bishop()
@@ -40,8 +49,9 @@ namespace jy
     {
     }
 
-    void Bishop::Move()
+    bool Bishop::Move(int posX, int posY)
     {
+        return true;
     }
 
     Knight::Knight()
@@ -52,8 +62,9 @@ namespace jy
     {
     }
 
-    void Knight::Move()
+    bool Knight::Move(int posX, int posY)
     {
+        return true;
     }
 
     Rook::Rook()
@@ -64,8 +75,9 @@ namespace jy
     {
     }
 
-    void Rook::Move()
+    bool Rook::Move(int posX, int posY)
     {
+        return true;
     }
 
     void Rook::Castling()
@@ -80,8 +92,9 @@ namespace jy
     {
     }
 
-    void Queen::Move()
+    bool Queen::Move(int posX, int posY)
     {
+        return true;
     }
 
     King::King()
@@ -92,8 +105,9 @@ namespace jy
     {
     }
 
-    void King::Move()
+    bool King::Move(int posX, int posY)
     {
+        return true;
     }
 
     void King::Castling()

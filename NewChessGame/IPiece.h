@@ -4,6 +4,6 @@ namespace jy
 {
     class IPiece
     {
-        virtual void Move() = 0;
+        virtual bool Move(int posX, int posY) = 0;
     };
 }

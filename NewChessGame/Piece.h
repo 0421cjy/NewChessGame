@@ -16,10 +16,13 @@ namespace jy
         virtual ~Pawn();
 
     public:
-        void Move() override;
-        void Promotion();
+        bool Move(int posX, int posY) override;
+        void Promote();
+
+    public:
         int GetColor() const;
-        std::pair<int, int> GetPosition() const;
+        int GetPositionX() const;
+        int GetPositionY() const;
     };
 
     class Bishop : public IPiece
@@ -34,7 +37,7 @@ namespace jy
         virtual ~Bishop();
 
     public:
-        void Move() override;
+        bool Move(int posX, int posY) override;
     };
 
     class Knight : public IPiece
@@ -49,7 +52,7 @@ namespace jy
         virtual ~Knight();
 
     public:
-        void Move() override;
+        bool Move(int posX, int posY) override;
     };
 
     class Rook : public IPiece
@@ -64,7 +67,7 @@ namespace jy
         virtual ~Rook();
 
     public:
-        void Move() override;
+        bool Move(int posX, int posY) override;
         void Castling();
     };
 
@@ -80,7 +83,7 @@ namespace jy
         virtual ~Queen();
 
     public:
-        void Move() override;
+        bool Move(int posX, int posY) override;
     };
 
     class King : public IPiece
@@ -95,7 +98,7 @@ namespace jy
         virtual ~King();
 
     public:
-        void Move() override;
+        bool Move(int posX, int posY) override;
         void Castling();
     };
 }
